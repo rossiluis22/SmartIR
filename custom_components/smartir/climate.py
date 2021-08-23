@@ -70,7 +70,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
 
         try:
             codes_source = ("https://raw.githubusercontent.com/"
-                            "rossiluis22/SmartIR/master/"
+                            "smartHomeHub/SmartIR/master/"
                             "codes/climate/{}.json")
 
             await Helper.downloader(codes_source.format(device_code), device_json_path)
@@ -104,6 +104,7 @@ class SmartIRClimate(ClimateEntity, RestoreEntity):
         self._humidity_sensor = config.get(CONF_HUMIDITY_SENSOR)
         self._power_sensor = config.get(CONF_POWER_SENSOR)
         self._power_sensor_restore_state = config.get(CONF_POWER_SENSOR_RESTORE_STATE)
+        self._previous_hvac_mode = HVAC_MODE_OFF
 
         self._manufacturer = device_data['manufacturer']
         self._supported_models = device_data['supportedModels']
@@ -318,10 +319,22 @@ class SmartIRClimate(ClimateEntity, RestoreEntity):
 
     async def async_set_hvac_mode(self, hvac_mode):
         """Set operation mode."""
+        self._previous_hvac_mode = self._hvac_mode
         self._hvac_mode = hvac_mode
         
         if not hvac_mode == HVAC_MODE_OFF:
             self._last_on_operation = hvac_mode
+
+            # Pre mode command
+    # Taken from https://github.com/smartHomeHub/SmartIR/issues/573
+    # modified to a generic `on_once` for all non-off operation
+        if not hvac_mode == HVAC_MODE_OFF:  # don't run if about to turn off
+            if self._previous_hvac_mode == HVAC_MODE_OFF:  # only if it's previously off
+                if 'on_once' in self._commands:
+                    await self._controller.send(self._commands['on_once'])
+                    await asyncio.sleep(self._delay)
+
+    # End pre mode
 
         await self.send_command()
         await self.async_update_ha_state()
