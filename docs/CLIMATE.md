@@ -288,6 +288,7 @@ Contributing to your own code files is welcome. However, we do not accept incomp
 | ---------------------------------- | ---------------- | ---------- |
 | [1320](../codes/climate/1320.json) | Unknown model    | Broadlink  |
 | [1321](../codes/climate/1321.json) | Top-Tech 14      | Broadlink  |
+| [1322](../codes/climate/1322.json) | HSU-09HPL03/R03  | Broadlink  |
 
 #### Tadiran
 | Code                               | Supported Models | Controller |
@@ -320,6 +321,7 @@ Contributing to your own code files is welcome. However, we do not accept incomp
 | ---------------------------------- | ---------------- | ---------- |
 | [1400](../codes/climate/1400.json) | Unknown model    | Broadlink  |
 | [1401](../codes/climate/1401.json) | AR##HSF/JFS##    | Broadlink  |
+| [1402](../codes/climate/1402.json) | AR##TSHGAWK      | Broadlink  |
 
 #### Sintech
 | Code                               | Supported Models | Controller |
@@ -371,6 +373,7 @@ Contributing to your own code files is welcome. However, we do not accept incomp
 | Code                               | Supported Models | Controller |
 | ---------------------------------- | ---------------- | ---------- |
 | [1580](../codes/climate/1580.json) | ZH/JT-03 (Remote)| Broadlink  |
+| [1581](../codes/climate/1581.json) | ZH/JT-03 (Remote)| Broadlink  |
 | [3580](../codes/climate/3580.json) | Unknown          | Xiaomi (v2)|
 
 #### Beko
@@ -378,6 +381,7 @@ Contributing to your own code files is welcome. However, we do not accept incomp
 | ---------------------------------- | ---------------- | ---------- |
 | [1600](../codes/climate/1600.json) | BEVCA 120        | Broadlink  |
 | [1601](../codes/climate/1601.json) | BPAK 120         | Broadlink  |
+| [1602](../codes/climate/1602.json) | BXK 120          | Broadlink  |
 
 #### Tornado
 | Code                               | Supported Models | Controller |
@@ -408,6 +412,7 @@ Contributing to your own code files is welcome. However, we do not accept incomp
 | [1686](../codes/climate/1685.json) | SRK20ZSA-W<br>SRK25ZSA-W<br>SRK35ZSA-W<br>SRK50ZSA-W | Broadlink  |
 | [1687](../codes/climate/1687.json) | SRK35ZJX-S<br>SRK20ZJX-S                             | Broadlink  |
 | [1688](../codes/climate/1688.json) | SRK25ZSP-W<br>SRK35ZSP-W<br>SRK45ZSP-W               | Broadlink  |
+| [1689](../codes/climate/1689.json) | DXK12ZSA-W                                           | Broadlink  |
 
 #### Electrolux
 | Code                               | Supported Models                                                                                                                                                                             | Controller |
@@ -415,6 +420,7 @@ Contributing to your own code files is welcome. However, we do not accept incomp
 | [1700](../codes/climate/1700.json) | EACS/I-HAT/N3                                                                                                                                                                                | Broadlink  |
 | [1701](../codes/climate/1701.json) | EACS-HA                                                                                                                                                                                      | Broadlink  |
 | [1702](../codes/climate/1702.json) | QI/QE09F<br>QI/QE09R<br>QI/QE12F<br>QI/QE12R<br>QI/QE18F<br>QI/QE18R<br>QI/QE22F<br>QI/QE22R<br>XI/XE09F<br>XI/XE09R<br>XI/XE12F<br>XI/XE12R<br>XI/XE18F<br>XI/XE18R<br>XI/XE22F<br>XI/XE22R | Broadlink  |
+| [1703](../codes/climate/1703.json) | EXP26U758CW   | Broadlink  |
 
 #### Erisson
 | Code                               | Supported Models | Controller |
@@ -697,3 +703,18 @@ Contributing to your own code files is welcome. However, we do not accept incomp
 | Code                               | Supported Models       | Controller |
 | ---------------------------------- | ---------------------- | ---------- |
 | [2780](../codes/climate/2780.json) | KFR-35G/F3C1           | Broadlink  |
+
+#### Elgin
+| Code                               | Supported Models       | Controller |
+| ---------------------------------- | ---------------------- | ---------- |
+| [2800](../codes/climate/2800.json) | HVQI18B2IA             | Broadlink  |
+
+#### Pearl
+| Code                               | Supported Models       | Controller |
+| ---------------------------------- | ---------------------- | ---------- |
+| [2820](../codes/climate/2820.json) | EXGC24FCBC1            | Broadlink  |
+
+#### HTW
+| Code                               | Supported Models       | Controller |
+| ---------------------------------- | ---------------------- | ---------- |
+| [2840](../codes/climate/2840.json) | HTWS035IX21D2-R32-I    | Broadlink  |
