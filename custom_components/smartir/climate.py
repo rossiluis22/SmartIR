@@ -70,7 +70,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
 
         try:
             codes_source = ("https://raw.githubusercontent.com/"
-                            "smartHomeHub/SmartIR/master/"
+                            "rossiluis22/SmartIR/master/"
                             "codes/climate/{}.json")
 
             await Helper.downloader(codes_source.format(device_code), device_json_path)
@@ -414,7 +414,7 @@ class SmartIRClimate(ClimateEntity, RestoreEntity):
         if new_state is None:
             return
 
-        if new_state.state == old_state.state:
+        if old_state is not None and new_state.state == old_state.state:
             return
 
         if new_state.state == STATE_ON and self._hvac_mode == HVAC_MODE_OFF:
